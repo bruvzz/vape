@@ -342,8 +342,8 @@ function lib:Window(text, preset, closebind)
         TabTitle.Font = Enum.Font.Gotham
         TabTitle.Text = text
         TabTitle.TextColor3 = Color3.fromRGB(150, 150, 150)
-        TabTitle.TextSize = 14.000
-        TabTitle.TextXAlignment = Enum.TextXAlignment.Left
+        TabTitle.TextSize = 17.000
+        TabTitle.TextXAlignment = Enum.TextXAlignment.Center
 
         TabBtnIndicator.Name = "TabBtnIndicator"
         TabBtnIndicator.Parent = TabBtn
