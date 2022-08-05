@@ -575,7 +575,7 @@ function lib:Window(text, preset, closebind)
                         TweenService:Create(
                             Toggle,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {BackgroundColor3 = PresetColor}
+                            {BackgroundColor3 = Color3.fromRGB(37, 37, 37)}
                         ):Play()
                         TweenService:Create(
                             FrameToggle1,
