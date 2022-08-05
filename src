@@ -403,7 +403,7 @@ function lib:Window(text, preset, closebind)
                             true
                         )
                         TabBtnIndicator:TweenSize(
-                            UDim2.new(100, 100, 100, 100),
+                            UDim2.new(0, 0, 0, 2),
                             Enum.EasingDirection.Out,
                             Enum.EasingStyle.Quart,
                             .2,
