@@ -115,8 +115,8 @@ function lib:Window(text, preset, closebind)
     TabHold.Parent = Main
     TabHold.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     TabHold.BackgroundTransparency = 1.000
-    TabHold.Position = UDim2.new(0.0339285731, 0, 0.147335425, 0)
-    TabHold.Size = UDim2.new(0, 107, 0, 254)
+    TabHold.Position = UDim2.new(0, 0, 0.082, 0)
+    TabHold.Size = UDim2.new(0, 107, 0, 452)
 
     TabHoldLayout.Name = "TabHoldLayout"
     TabHoldLayout.Parent = TabHold
@@ -127,7 +127,7 @@ function lib:Window(text, preset, closebind)
     Title.Parent = Main
     Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Title.BackgroundTransparency = 1.000
-    Title.Position = UDim2.new(0.0339285731, 0, 0.0564263314, 0)
+    Title.Position = UDim2.new(0.016, 0, 0.016, 0)
     Title.Size = UDim2.new(0, 200, 0, 23)
     Title.Font = Enum.Font.GothamSemibold
     Title.Text = text
