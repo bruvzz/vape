@@ -460,7 +460,7 @@ function lib:Window(text, preset, closebind)
                     TweenService:Create(
                         Button,
                         TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                        {BackgroundColor3 = Color3.fromRGB(79, 114, 193)}
+                        {BackgroundColor3 = Color3.fromRGB(44, 120, 224)}
                     ):Play()
                 end
             )
