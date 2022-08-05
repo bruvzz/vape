@@ -106,7 +106,10 @@ function lib:Window(text, preset, closebind)
     Main.Size = UDim2.new(0, 0, 0, 0)
     Main.ClipsDescendants = true
     Main.Visible = true
+    
     MainCorner.CornerRadius = UDim2.new(0, 8)
+    MainCorner.Name = "MainCorner"
+    MainCorner.Parent = Main
 
     TabHold.Name = "TabHold"
     TabHold.Parent = Main
