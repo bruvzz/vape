@@ -107,7 +107,7 @@ function lib:Window(text, preset, closebind)
     Main.ClipsDescendants = true
     Main.Visible = true
     
-    MainCorner.CornerRadius = UDim2.new(0, 8)
+    MainCorner.CornerRadius = UDim.new(0, 8)
     MainCorner.Name = "MainCorner"
     MainCorner.Parent = Main
 
