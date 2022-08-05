@@ -90,7 +90,7 @@ function lib:Window(text, preset, closebind)
     PresetColor = preset or Color3.fromRGB(44, 120, 224)
     fs = false
     local Main = Instance.new("Frame")
-    local MainConer = Instance.new("UICorner")
+    local MainCorner = Instance.new("UICorner")
     local TabHold = Instance.new("Frame")
     local TabHoldLayout = Instance.new("UIListLayout")
     local Title = Instance.new("TextLabel")
