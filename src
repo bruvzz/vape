@@ -321,8 +321,6 @@ function lib:Window(text, preset, closebind)
     function tabhold:Tab(text)
         local TabBtn = Instance.new("TextButton")
         local TabTitle = Instance.new("TextLabel")
-        local TabBtnIndicator = Instance.new("Frame")
-        local TabBtnIndicatorCorner = Instance.new("UICorner")
 
         TabBtn.Name = "TabBtn"
         TabBtn.Parent = TabHold
@@ -344,24 +342,6 @@ function lib:Window(text, preset, closebind)
         TabTitle.TextColor3 = Color3.fromRGB(150, 150, 150)
         TabTitle.TextSize = 17.000
         TabTitle.TextXAlignment = Enum.TextXAlignment.Center
-
-        TabBtnIndicator.Name = "TabBtnIndicator"
-        TabBtnIndicator.Parent = TabBtn
-        TabBtnIndicator.BackgroundColor3 = PresetColor
-        TabBtnIndicator.BorderSizePixel = 0
-        TabBtnIndicator.Position = UDim2.new(0, 0, 0, 0)
-        TabBtnIndicator.Size = UDim2.new(0, 107, 0, 21)
-
-        TabBtnIndicatorCorner.Name = "TabBtnIndicatorCorner"
-        TabBtnIndicatorCorner.Parent = TabBtnIndicator
-
-        coroutine.wrap(
-            function()
-                while wait() do
-                    TabBtnIndicator.BackgroundColor3 = PresetColor
-                end
-            end
-        )()
 
         local Tab = Instance.new("ScrollingFrame")
         local TabLayout = Instance.new("UIListLayout")
@@ -385,7 +365,6 @@ function lib:Window(text, preset, closebind)
 
         if fs == false then
             fs = true
-            TabBtnIndicator.Size = UDim2.new(0, 13, 0, 2)
             TabTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             Tab.Visible = true
         end
@@ -400,20 +379,6 @@ function lib:Window(text, preset, closebind)
                 end
                 for i, v in next, TabHold:GetChildren() do
                     if v.Name == "TabBtn" then
-                        v.TabBtnIndicator:TweenSize(
-                            UDim2.new(0, 107, 0, 21),
-                            Enum.EasingDirection.Out,
-                            Enum.EasingStyle.Quart,
-                            .2,
-                            true
-                        )
-                        TabBtnIndicator:TweenSize(
-                            UDim2.new(0, 107, 0, 21),
-                            Enum.EasingDirection.Out,
-                            Enum.EasingStyle.Quart,
-                            .2,
-                            true
-                        )
                         TweenService:Create(
                             v.TabTitle,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
