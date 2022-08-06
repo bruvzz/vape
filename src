@@ -389,16 +389,6 @@ function lib:Window(text, preset, closebind)
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {TextColor3 = Color3.fromRGB(255, 255, 255)}
                         ):Play()
-                        TweenService:Create(
-                            TabBtn,
-                            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {TextColor3 = Color3.fromRGB(30, 30, 30)}
-                        ):Play()
-                        TweenService:Create(
-                            TabBtn,
-                            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {TextColor3 = PresetColor}
-                        ):Play()
                     end
                 end
             end
