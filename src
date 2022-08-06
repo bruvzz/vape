@@ -349,7 +349,7 @@ function lib:Window(text, preset, closebind)
         TabBtnIndicator.Parent = TabBtn
         TabBtnIndicator.BackgroundColor3 = PresetColor
         TabBtnIndicator.BorderSizePixel = 0
-        TabBtnIndicator.Position = UDim2.new(0, 0, 1, 0)
+        TabBtnIndicator.Position = UDim2.new(0, 0, 0, 0)
         TabBtnIndicator.Size = UDim2.new(0, 107, 0, 21)
 
         TabBtnIndicatorCorner.Name = "TabBtnIndicatorCorner"
