@@ -96,6 +96,8 @@ function lib:Window(text, preset, closebind)
     local Title = Instance.new("TextLabel")
     local TabFolder = Instance.new("Folder")
     local DragFrame = Instance.new("Frame")
+    local CloseBtn = Instance.new("TextButton")
+    local CloseBtnCorner = Instance.new("UICorner")
 
     Main.Name = "Main"
     Main.Parent = ui
@@ -141,6 +143,21 @@ function lib:Window(text, preset, closebind)
     DragFrame.BackgroundTransparency = 1.000
     DragFrame.Size = UDim2.new(0, 560, 0, 41)
 
+    CloseBtn.Name = "CloseBtn"
+    CloseBtn.Parent = Main
+    CloseBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    CloseBtn.BackgroundTransparency = 0
+    CloseBtn.Position = UDim2.new(0.909, 0, 0.006, 0)
+    CloseBtn.Size = UDim2.new(0, 34, 0, 32)
+    CloseBtn.Text = "X"
+    CloseBtn.TextSize = 20.000
+    CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    CloseBtn.Font = Enum.Font.Legacy
+
+    CloseBtnCorner.CornerRadius = UDim.new(0, 5)
+    CloseBtnCorner.Name = "CloseBtnCorner"
+    CloseBtnCorner.Parent = CloseBtn
+
     Main:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "Out", "Quint", 1, true)
 
     MakeDraggable(DragFrame, Main)
@@ -168,6 +185,26 @@ function lib:Window(text, preset, closebind)
             end
         end
     )
+
+    CloseBtn.MouseEnter:Connect(
+                function()
+                    TweenService:Create(
+                        CloseBtn,
+                        TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                        {BackgroundColor3 = Color3.fromRGB(35, 35, 35)}
+                    ):Play()
+                end
+            )
+
+            CloseBtn.MouseLeave:Connect(
+                function()
+                    TweenService:Create(
+                        CloseBtn,
+                        TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                        {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}
+                    ):Play()
+                end
+            )
 
     TabFolder.Name = "TabFolder"
     TabFolder.Parent = Main
