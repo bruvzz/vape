@@ -146,6 +146,7 @@ function lib:Window(text, preset, closebind)
     CloseBtn.Name = "CloseBtn"
     CloseBtn.Parent = Main
     CloseBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    CloseBtn.AutoButtonColor = false
     CloseBtn.BackgroundTransparency = 0
     CloseBtn.Position = UDim2.new(0.909, 0, 0.006, 0)
     CloseBtn.Size = UDim2.new(0, 34, 0, 32)
@@ -186,31 +187,31 @@ function lib:Window(text, preset, closebind)
         end
     )
 
-            CloseBtn.MouseEnter:Connect(
-                function()
-                    TweenService:Create(
-                        CloseBtn,
-                        TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                        {BackgroundColor3 = Color3.fromRGB(35, 35, 35)}
-                    ):Play()
-                end
-            )
+    CloseBtn.MouseEnter:Connect(
+        function()
+            TweenService:Create(
+                CloseBtn,
+                TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                {BackgroundColor3 = Color3.fromRGB(35, 35, 35)}
+            ):Play()
+        end
+    )
 
-            CloseBtn.MouseLeave:Connect(
-                function()
-                    TweenService:Create(
-                        CloseBtn,
-                        TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                        {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}
-                    ):Play()
-                end
-            )
+    CloseBtn.MouseLeave:Connect(
+        function()
+            TweenService:Create(
+                CloseBtn,
+                TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}
+            ):Play()
+        end
+    )
 
-            CloseBtn.MouseButton1Click:Connect(
-                function()
-                    game.CoreGui:FindFirstChild("ui"):Destroy()
-                end
-            )
+    CloseBtn.MouseButton1Click:Connect(
+        function()
+            game.CoreGui:FindFirstChild("ui"):Destroy()
+        end
+    )
 
     TabFolder.Name = "TabFolder"
     TabFolder.Parent = Main
