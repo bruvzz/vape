@@ -350,7 +350,7 @@ function lib:Window(text, preset, closebind)
         Tab.Parent = TabFolder
         Tab.Active = true
         Tab.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
-        Tab.BackgroundTransparency = 0.000
+        Tab.BackgroundTransparency = 1.000
         Tab.BorderSizePixel = 0
         Tab.Position = UDim2.new(0.249, 0, 0.081, 0)
         Tab.Size = UDim2.new(0, 373, 0, 452)
@@ -423,7 +423,7 @@ function lib:Window(text, preset, closebind)
             ButtonTitle.Text = text
             ButtonTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             ButtonTitle.TextSize = 14.000
-            ButtonTitle.TextXAlignment = Enum.TextXAlignment.Center
+            ButtonTitle.TextXAlignment = Enum.TextXAlignment.Right
 
             Button.MouseEnter:Connect(
                 function()
