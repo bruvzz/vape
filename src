@@ -423,7 +423,7 @@ function lib:Window(text, preset, closebind)
             ButtonTitle.Text = text
             ButtonTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             ButtonTitle.TextSize = 14.000
-            ButtonTitle.TextXAlignment = Enum.TextXAlignment.Right
+            ButtonTitle.TextXAlignment = Enum.TextXAlignment.Left
 
             Button.MouseEnter:Connect(
                 function()
