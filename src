@@ -382,7 +382,7 @@ function lib:Window(text, preset, closebind)
                         TweenService:Create(
                             v.TabTitle,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {TextColor3 = Color3.fromRGB(150, 150, 150)}
+                            {TextColor3 = Color3.fromRGB(75, 75, 75)}
                         ):Play()
                         TweenService:Create(
                             TabTitle,
