@@ -349,7 +349,7 @@ function lib:Window(text, preset, closebind)
         Tab.Name = "Tab"
         Tab.Parent = TabFolder
         Tab.Active = true
-        Tab.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+        Tab.BackgroundColor3 = Color3.fromRGB(32, 32, 32)
         Tab.BackgroundTransparency = 0.000
         Tab.BorderSizePixel = 0
         Tab.Position = UDim2.new(0.249, 0, 0.081, 0)
