@@ -156,7 +156,7 @@ function lib:Window(text, preset, closebind)
                     knixhub.Enabled = false
                 else
                     Main:TweenSize(
-                        UDim2.new(0, 560, 0, 319),
+                        UDim2.new(0, 514, 0, 507),
                         Enum.EasingDirection.Out,
                         Enum.EasingStyle.Quart,
                         .6,
