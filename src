@@ -186,7 +186,7 @@ function lib:Window(text, preset, closebind)
         end
     )
 
-    CloseBtn.MouseEnter:Connect(
+            CloseBtn.MouseEnter:Connect(
                 function()
                     TweenService:Create(
                         CloseBtn,
@@ -203,6 +203,12 @@ function lib:Window(text, preset, closebind)
                         TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                         {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}
                     ):Play()
+                end
+            )
+
+            CloseBtn.MouseButton1Click:Connect(
+                function()
+                    game.CoreGui:FindFirstChild("ui"):Destroy()
                 end
             )
 
