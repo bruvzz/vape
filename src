@@ -339,7 +339,7 @@ function lib:Window(text, preset, closebind)
         TabTitle.Size = UDim2.new(0, 107, 0, 21)
         TabTitle.Font = Enum.Font.Gotham
         TabTitle.Text = text
-        TabTitle.TextColor3 = Color3.fromRGB(150, 150, 150)
+        TabTitle.TextColor3 = Color3.fromRGB(75, 75, 75)
         TabTitle.TextSize = 19.000
         TabTitle.TextXAlignment = Enum.TextXAlignment.Center
 
