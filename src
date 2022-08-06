@@ -395,7 +395,7 @@ function lib:Window(text, preset, closebind)
                             {TextColor3 = PresetColor}
                         ):Play()
                         TweenService:Create(
-                            v.TabBtn,
+                            TabBtn,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {TextColor3 = Color3.fromRGB(30,30,30)}
                         ):Play()
