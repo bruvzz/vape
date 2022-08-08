@@ -117,7 +117,7 @@ function lib:Window(text, preset, closebind)
     MainStroke.ApplyStrokeMode = "Border"
     MainStroke.Thickness = 2.000
     MainStroke.Name = "MainStroke"
-    Main.Parent = Main
+    MainStroke.Parent = Main
 
     TabHold.Name = "TabHold"
     TabHold.Parent = Main
