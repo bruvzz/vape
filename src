@@ -479,6 +479,14 @@ function lib:Window(text, preset, closebind)
             end
         )
 
+        coroutine.wrap(
+                function()
+                    while wait() do
+                        TabBtn.BackgroundColor3 = PresetColor
+                    end
+                end
+            )()
+
         local tabcontent = {}
         function tabcontent:Button(text, callback)
             local Button = Instance.new("TextButton")
