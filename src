@@ -220,6 +220,14 @@ function lib:Window(text, preset, closebind)
         end
     )
 
+    coroutine.wrap(
+                function()
+                    while wait() do
+                        MainStroke.Color = PresetColor
+                    end
+                end
+            )()
+
     TabFolder.Name = "TabFolder"
     TabFolder.Parent = Main
 
