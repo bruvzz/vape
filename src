@@ -259,7 +259,7 @@ function lib:Window(text, preset, closebind)
     )
 
     MinimizeBtn.MouseButton1Click:Connect(function()
-        if Main.Size ~= newUDim2(0, 514, 0, 42) then
+        if Main.Size ~= newUDim2(0, 514, 0, 40) then
             Main:TweenSize(newUDim2(0, 514, 0, 41), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.25, true);
         else
             Main:TweenSize(newUDim2(0, 514, 0, 507), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.25, true);
@@ -518,14 +518,6 @@ function lib:Window(text, preset, closebind)
                 end
             end
         )
-
-        coroutine.wrap(
-                function()
-                    while wait() do
-                        TabTitle.BackgroundColor3 = PresetColor
-                    end
-                end
-            )()
 
         local tabcontent = {}
         function tabcontent:Button(text, callback)
