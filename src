@@ -448,17 +448,17 @@ function lib:Window(text, preset, closebind)
                     end
                     Tab.Visible = true
                 end
-                for i, v in next, Main:GetChildren() do
-                    if v.Name == "TabHold" then
+                for i, v in next, tabhold:GetChildren() do
+                    if v.Name == "tabhold" then
                         TweenService:Create(
                             v.TabBtn,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {TextColor3 = Color3.fromRGB(75, 75, 75)}
+                            {BackgroundColor3 = Color3.fromRGB(75, 75, 75)}
                         ):Play()
                         TweenService:Create(
                             TabBtn,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {TextColor3 = PresetColor}
+                            {BackgroundColor3 = PresetColor}
                         ):Play()
                     end
                 end
