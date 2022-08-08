@@ -380,7 +380,7 @@ function lib:Window(text, preset, closebind)
     function tabhold:Tab(text)
         local TabBtn = Instance.new("TextButton")
         local TabTitle = Instance.new("TextLabel")
-        local TabBtnCorner = Instance.new("UICorner")
+        local TabTitleCorner = Instance.new("UICorner")
         local TabBtnStroke = Instance.new("UIStroke")
 
         TabBtn.Name = "TabBtn"
@@ -393,10 +393,6 @@ function lib:Window(text, preset, closebind)
         TabBtn.Text = ""
         TabBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
         TabBtn.TextSize = 14.000
-
-        TabBtnCorner.CornerRadius = UDim.new(0, 5)
-        TabBtnCorner.Name = "TabBtnCorner"
-        TabBtnCorner.Parent = TabBtn
 
         TabBtnStroke.ApplyStrokeMode = "Border"
         TabBtnStroke.Thickness = 2.000
@@ -414,6 +410,10 @@ function lib:Window(text, preset, closebind)
         TabTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
         TabTitle.TextSize = 19.000
         TabTitle.TextXAlignment = Enum.TextXAlignment.Center
+
+        TabTitleCorner.CornerRadius = UDim.new(0, 5)
+        TabTitleCorner.Name = "TabTitleCorner"
+        TabTitleCorner.Parent = TabTitle
 
         local Tab = Instance.new("ScrollingFrame")
         local TabLayout = Instance.new("UIListLayout")
@@ -477,6 +477,7 @@ function lib:Window(text, preset, closebind)
         local tabcontent = {}
         function tabcontent:Button(text, callback)
             local Button = Instance.new("TextButton")
+            local ButtonCorner = Instance.new("UICorner")
             local ButtonTitle = Instance.new("TextLabel")
 
             Button.Name = "Button"
@@ -488,6 +489,10 @@ function lib:Window(text, preset, closebind)
             Button.Text = ""
             Button.TextColor3 = Color3.fromRGB(0, 0, 0)
             Button.TextSize = 14.000
+
+            ButtonCorner.CornerRadius = UDim.new(0, 5)
+            ButtonCorner.Name = "ButtonCorner"
+            ButtonCorner.Parent = Button
 
             ButtonTitle.Name = "ButtonTitle"
             ButtonTitle.Parent = Button
