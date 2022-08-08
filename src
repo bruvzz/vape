@@ -452,12 +452,12 @@ function lib:Window(text, preset, closebind)
                 for i, v in next, TabHold:GetChildren() do
                     if v.Name == "TabBtn" then
                         TweenService:Create(
-                            TabBtn,
+                            v.TabTitle,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}
                         ):Play()
                         TweenService:Create(
-                            TabBtn,
+                            TabTitle,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {BackgroundColor3 = Color3.fromRGB(75, 75, 75)}
                         ):Play()
