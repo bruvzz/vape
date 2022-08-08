@@ -173,7 +173,7 @@ function lib:Window(text, preset, closebind)
     MinimizeBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     MinimizeBtn.AutoButtonColor = false
     MinimizeBtn.BackgroundTransparency = 0
-    MinimizeBtn.Position = UDim2.new(0.856, 0, 0.006, 0)
+    MinimizeBtn.Position = UDim2.new(0.842, 0, 0.006, 0)
     MinimizeBtn.Size = UDim2.new(0, 34, 0, 32)
     MinimizeBtn.Text = "_"
     MinimizeBtn.TextSize = 27.000
