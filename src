@@ -259,7 +259,7 @@ function lib:Window(text, preset, closebind)
     )
 
     MinimizeBtn.MouseButton1Click:Connect(function()
-        if Main.Size ~= newUDim2(0, 514, 0, 41) then
+        if Main.Size ~= UDim2.new(0, 514, 0, 41) then
             Main:TweenSize(UDim2.new(0, 514, 0, 41), "Out", "Quad", 0.25, true);
         else
             Main:TweenSize(UDim2.new(0, 514, 0, 507), "Out", "Quad", 0.25, true);
