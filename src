@@ -116,7 +116,7 @@ function lib:Window(text, preset, closebind)
 
     MainStroke.ApplyStrokeMode = "Border"
     MainStroke.Thickness = 2.000
-    Mainstroke.Color = Color3.fromRGB(255, 255, 255)
+    Mainstroke.BorderColor = Color3.fromRGB(255, 255, 255)
     MainStroke.Name = "MainStroke"
     MainStroke.Parent = Main
 
