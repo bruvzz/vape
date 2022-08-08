@@ -406,12 +406,12 @@ function lib:Window(text, preset, closebind)
 
         TabTitle.Name = "TabTitle"
         TabTitle.Parent = TabBtn
-        TabTitle.BackgroundColor3 = Color3.fromRGB(75, 75, 75)
+        TabTitle.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
         TabTitle.BackgroundTransparency = 0
         TabTitle.Size = UDim2.new(0, 107, 0, 21)
         TabTitle.Font = Enum.Font.Gotham
         TabTitle.Text = text
-        TabTitle.TextColor3 = Color3.fromRGB(75, 75, 75)
+        TabTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
         TabTitle.TextSize = 19.000
         TabTitle.TextXAlignment = Enum.TextXAlignment.Center
 
@@ -459,7 +459,7 @@ function lib:Window(text, preset, closebind)
                         TweenService:Create(
                             TabTitle,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {BackgroundColor3 = Color3.fromRGB(75, 75, 75)}
+                            {BackgroundColor3 = PresetColor}
                         ):Play()
                     end
                 end
@@ -477,7 +477,6 @@ function lib:Window(text, preset, closebind)
         local tabcontent = {}
         function tabcontent:Button(text, callback)
             local Button = Instance.new("TextButton")
-            local ButtonCorner = Instance.new("UICorner")
             local ButtonTitle = Instance.new("TextLabel")
 
             Button.Name = "Button"
@@ -489,10 +488,6 @@ function lib:Window(text, preset, closebind)
             Button.Text = ""
             Button.TextColor3 = Color3.fromRGB(0, 0, 0)
             Button.TextSize = 14.000
-
-            ButtonCorner.CornerRadius = UDim.new(0, 5)
-            ButtonCorner.Name = "ButtonCorner"
-            ButtonCorner.Parent = Button
 
             ButtonTitle.Name = "ButtonTitle"
             ButtonTitle.Parent = Button
