@@ -99,6 +99,8 @@ function lib:Window(text, preset, closebind)
     local DragFrame = Instance.new("Frame")
     local CloseBtn = Instance.new("TextButton")
     local CloseBtnCorner = Instance.new("UICorner")
+    local MinimizeBtn = Instance.new("TextButton")
+    local MinimizeBtnCorner = Instance.new("UICorner")
 
     Main.Name = "Main"
     Main.Parent = ui
@@ -166,6 +168,22 @@ function lib:Window(text, preset, closebind)
     CloseBtnCorner.Name = "CloseBtnCorner"
     CloseBtnCorner.Parent = CloseBtn
 
+    MinimizeBtn.Name = "MinimizeBtn"
+    MinimizeBtn.Parent = Main
+    MinimizeBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    MinimizeBtn.AutoButtonColor = false
+    MinimizeBtn.BackgroundTransparency = 0
+    MinimizeBtn.Position = UDim2.new(0.856, 0, 0.006, 0)
+    MinimizeBtn.Size = UDim2.new(0, 34, 0, 32)
+    MinimizeBtn.Text = "_"
+    MinimizeBtn.TextSize = 27.000
+    MinimizeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+    MinimizeBtn.Font = Enum.Font.Nunito
+
+    MinimizeBtnCorner.CornerRadius = UDim.new(0, 5)
+    MinimizeBtnCorner.Name = "MinimizeBtnCorner"
+    MinimizeBtnCorner.Parent = MinimizeBtn
+
     Main:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "Out", "Quint", 1, true)
 
     MakeDraggable(DragFrame, Main)
@@ -219,6 +237,14 @@ function lib:Window(text, preset, closebind)
             game.CoreGui:FindFirstChild("ui"):Destroy()
         end
     )
+
+    MinimizeBtn.MouseButton1Click:Connect(function()
+        if Main.Size ~= newUDim2(0, 514, 0, 41) then
+            Main:TweenSize(newUDim2(0, 514, 0, 41), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.25, true);
+        else
+            Main:TweenSize(newUDim2(0, 514, 0, 507), Enum.EasingDirection.Out, Enum.EasingStyle.Quad, 0.25, true);
+        end;
+    end);
 
     coroutine.wrap(
                 function()
