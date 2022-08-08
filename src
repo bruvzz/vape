@@ -91,6 +91,7 @@ function lib:Window(text, preset, closebind)
     fs = false
     local Main = Instance.new("Frame")
     local MainCorner = Instance.new("UICorner")
+    local MainStroke = Instance.new("UIStroke")
     local TabHold = Instance.new("Frame")
     local TabHoldLayout = Instance.new("UIListLayout")
     local Title = Instance.new("TextLabel")
@@ -112,6 +113,11 @@ function lib:Window(text, preset, closebind)
     MainCorner.CornerRadius = UDim.new(0, 8)
     MainCorner.Name = "MainCorner"
     MainCorner.Parent = Main
+
+    MainStroke.ApplyStrokeMode = "Border"
+    MainStroke.Thickness = 2.000
+    MainStroke.Name = "MainStroke"
+    Main.Parent = Main
 
     TabHold.Name = "TabHold"
     TabHold.Parent = Main
