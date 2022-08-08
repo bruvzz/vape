@@ -396,7 +396,7 @@ function lib:Window(text, preset, closebind)
         TabTitle.Name = "TabTitle"
         TabTitle.Parent = TabBtn
         TabTitle.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-        TabTitle.BackgroundTransparency = 1
+        TabTitle.BackgroundTransparency = 0
         TabTitle.Size = UDim2.new(0, 107, 0, 21)
         TabTitle.Font = Enum.Font.Gotham
         TabTitle.Text = text
