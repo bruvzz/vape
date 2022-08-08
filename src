@@ -454,7 +454,7 @@ function lib:Window(text, preset, closebind)
                         TweenService:Create(
                             TabBtn,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                            {BackgroundColor3 = Color3.fromRGB(75, 75, 75)}
+                            {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}
                         ):Play()
                         TweenService:Create(
                             TabBtn,
