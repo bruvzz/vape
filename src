@@ -482,7 +482,7 @@ function lib:Window(text, preset, closebind)
         coroutine.wrap(
                 function()
                     while wait() do
-                        TabBtn.BackgroundColor3 = PresetColor
+                        TabTitle.BackgroundColor3 = PresetColor
                     end
                 end
             )()
