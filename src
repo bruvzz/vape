@@ -434,6 +434,12 @@ function lib:Window(text, preset, closebind)
             Tab.Visible = true
         end
 
+        if fs == false then
+            fs = true
+            TabTitle.BackgroundColor3 = PresetColor
+            Tab.Visible = true
+        end
+
         TabBtn.MouseButton1Click:Connect(
             function()
                 for i, v in next, TabFolder:GetChildren() do
