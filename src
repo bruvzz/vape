@@ -274,6 +274,14 @@ function lib:Window(text, preset, closebind)
         end
     end);
 
+    MinimizeBtn.MouseButton1Click:Connect(function()
+        if TabTitle.Visible == true then
+            TabTitle.Visible = false
+        else 
+            TabTitle.Visible = true
+        end
+    end);
+
     coroutine.wrap(
                 function()
                     while wait() do
