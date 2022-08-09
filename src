@@ -327,7 +327,7 @@ function lib:Window(text, preset, closebind)
         OkayBtn.Name = "OkayBtn"
         OkayBtn.Parent = NotificationFrame
         OkayBtn.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-        OkayBtn.Position = UDim2.new(0.0609756112, 0, 0.720207274, 0)
+        OkayBtn.Position = UDim2.new(0.246, 0, 0.707, 0)
         OkayBtn.Size = UDim2.new(0, 144, 0, 42)
         OkayBtn.AutoButtonColor = false
         OkayBtn.Font = Enum.Font.SourceSans
@@ -343,13 +343,13 @@ function lib:Window(text, preset, closebind)
         OkayBtnTitle.Parent = OkayBtn
         OkayBtnTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         OkayBtnTitle.BackgroundTransparency = 1.000
-        OkayBtnTitle.Position = UDim2.new(0.0763888881, 0, 0, 0)
-        OkayBtnTitle.Size = UDim2.new(0, 181, 0, 42)
+        OkayBtnTitle.Position = UDim2.new(0.246, 0, 0.707, 0)
+        OkayBtnTitle.Size = UDim2.new(0, 144, 0, 42)
         OkayBtnTitle.Font = Enum.Font.Gotham
         OkayBtnTitle.Text = textbtn
         OkayBtnTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
         OkayBtnTitle.TextSize = 14.000
-        OkayBtnTitle.TextXAlignment = Enum.TextXAlignment.Left
+        OkayBtnTitle.TextXAlignment = Enum.TextXAlignment.Center
 
         NotificationTitle.Name = "NotificationTitle"
         NotificationTitle.Parent = NotificationFrame
@@ -361,7 +361,7 @@ function lib:Window(text, preset, closebind)
         NotificationTitle.Text = texttitle
         NotificationTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
         NotificationTitle.TextSize = 18.000
-        NotificationTitle.TextXAlignment = Enum.TextXAlignment.Left
+        NotificationTitle.TextXAlignment = Enum.TextXAlignment.Center
 
         NotificationDesc.Name = "NotificationDesc"
         NotificationDesc.Parent = NotificationFrame
@@ -374,7 +374,7 @@ function lib:Window(text, preset, closebind)
         NotificationDesc.TextColor3 = Color3.fromRGB(255, 255, 255)
         NotificationDesc.TextSize = 15.000
         NotificationDesc.TextWrapped = true
-        NotificationDesc.TextXAlignment = Enum.TextXAlignment.Left
+        NotificationDesc.TextXAlignment = Enum.TextXAlignment.Center
         NotificationDesc.TextYAlignment = Enum.TextYAlignment.Top
 
         OkayBtn.MouseEnter:Connect(
