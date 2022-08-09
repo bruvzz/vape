@@ -344,7 +344,7 @@ function lib:Window(text, preset, closebind)
         OkayBtnTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         OkayBtnTitle.BackgroundTransparency = 1.000
         OkayBtnTitle.Position = UDim2.new(0.246, 0, 0.707, 0)
-        OkayBtnTitle.Size = UDim2.new(0, 144, 0, 42)
+        OkayBtnTitle.Size = UDim2.new(0, 181, 0, 42)
         OkayBtnTitle.Font = Enum.Font.Gotham
         OkayBtnTitle.Text = textbtn
         OkayBtnTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -361,7 +361,7 @@ function lib:Window(text, preset, closebind)
         NotificationTitle.Text = texttitle
         NotificationTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
         NotificationTitle.TextSize = 18.000
-        NotificationTitle.TextXAlignment = Enum.TextXAlignment.Center
+        NotificationTitle.TextXAlignment = Enum.TextXAlignment.Left
 
         NotificationDesc.Name = "NotificationDesc"
         NotificationDesc.Parent = NotificationFrame
@@ -374,7 +374,7 @@ function lib:Window(text, preset, closebind)
         NotificationDesc.TextColor3 = Color3.fromRGB(255, 255, 255)
         NotificationDesc.TextSize = 15.000
         NotificationDesc.TextWrapped = true
-        NotificationDesc.TextXAlignment = Enum.TextXAlignment.Center
+        NotificationDesc.TextXAlignment = Enum.TextXAlignment.Left
         NotificationDesc.TextYAlignment = Enum.TextYAlignment.Top
 
         OkayBtn.MouseEnter:Connect(
