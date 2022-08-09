@@ -295,7 +295,7 @@ function lib:Window(text, preset, closebind)
         NotificationHold.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
         NotificationHold.BackgroundTransparency = 1.000
         NotificationHold.BorderSizePixel = 0
-        NotificationHold.Size = UDim2.new(0, 560, 0, 319)
+        NotificationHold.Size = UDim2.new(0, 560, 0, 507)
         NotificationHold.AutoButtonColor = false
         NotificationHold.Font = Enum.Font.SourceSans
         NotificationHold.Text = ""
@@ -304,7 +304,7 @@ function lib:Window(text, preset, closebind)
 
         TweenService:Create(
             NotificationHold,
-            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+            TweenInfo.new(1, "Out", "Quint"),
             {BackgroundTransparency = 0.7}
         ):Play()
         wait(0.4)
@@ -315,7 +315,7 @@ function lib:Window(text, preset, closebind)
         NotificationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
-        NotificationFrame.Position = UDim2.new(0.5, 0, 0.498432577, 0)
+        NotificationFrame.Position = UDim2.new(0, 0, 0, 0)
 
         NotificationFrame:TweenSize(
             UDim2.new(0, 164, 0, 193),
