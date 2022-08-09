@@ -593,6 +593,14 @@ function lib:Window(text, preset, closebind)
                 end
             )
 
+            MinimizeBtn.MouseButton1Click:Connect(function()
+                if Button.Visible == true then
+                    Button.Visible = false
+                else 
+                    Button.Visible = true
+                end
+            end);
+
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
         function tabcontent:Toggle(text,default, callback)
