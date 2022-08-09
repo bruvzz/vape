@@ -594,10 +594,10 @@ function lib:Window(text, preset, closebind)
             )
 
             MinimizeBtn.MouseButton1Click:Connect(function()
-                if Button.Visible == true then
-                    Button.Visible = false
+                if Tab.Visible == true then
+                    Tab.Visible = false
                 else 
-                    Button.Visible = true
+                    Tab.Visible = true
                 end
             end);
 
