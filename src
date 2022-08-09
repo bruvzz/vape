@@ -594,10 +594,10 @@ function lib:Window(text, preset, closebind)
             )
 
             MinimizeBtn.MouseButton1Click:Connect(function()
-                if Tab.Visible == true then
-                    Tab.Visible = false
+                if Button.Visible == true then
+                    Button.Visible = false
                 else 
-                    Tab.Visible = true
+                    Button.Visible = true
                 end
             end);
 
@@ -799,6 +799,14 @@ function lib:Window(text, preset, closebind)
                 toggled = not toggled
             end
 
+            MinimizeBtn.MouseButton1Click:Connect(function()
+                if Toggle.Visible == true then
+                    Toggle.Visible = false
+                else 
+                    Toggle.Visible = true
+                end
+            end);
+
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
         function tabcontent:Slider(text, min, max, start, callback)
@@ -923,6 +931,15 @@ function lib:Window(text, preset, closebind)
                     end
                 end
             )
+
+            MinimizeBtn.MouseButton1Click:Connect(function()
+                if Slider.Visible == true then
+                    Slider.Visible = false
+                else 
+                    Slider.Visible = true
+                end
+            end);
+
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
         function tabcontent:Dropdown(text, list, callback)
@@ -1099,6 +1116,15 @@ function lib:Window(text, preset, closebind)
 
                 DropItemHolder.CanvasSize = UDim2.new(0, 0, 0, DropLayout.AbsoluteContentSize.Y)
             end
+
+            MinimizeBtn.MouseButton1Click:Connect(function()
+                if Dropdown.Visible == true then
+                    Dropdown.Visible = false
+                else 
+                    Dropdown.Visible = true
+                end
+            end);
+
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
         function tabcontent:Colorpicker(text, preset, callback)
@@ -1582,6 +1608,15 @@ function lib:Window(text, preset, closebind)
                     Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
                 end
             )
+
+            MinimizeBtn.MouseButton1Click:Connect(function()
+                if Colorpicker.Visible == true then
+                    Colorpicker.Visible = false
+                else 
+                    Colorpicker.Visible = true
+                end
+            end);
+
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
         function tabcontent:Label(text)
@@ -1614,6 +1649,14 @@ function lib:Window(text, preset, closebind)
             LabelTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             LabelTitle.TextSize = 14.000
             LabelTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+            MinimizeBtn.MouseButton1Click:Connect(function()
+                if Label.Visible == true then
+                    Label.Visible = false
+                else 
+                    Label.Visible = true
+                end
+            end);
 
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
@@ -1679,80 +1722,15 @@ function lib:Window(text, preset, closebind)
                     end
                 end
             )
-            Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
-        end
-        function tabcontent:Bind(text, keypreset, callback)
-            local binding = false
-            local Key = keypreset.Name
-            local Bind = Instance.new("TextButton")
-            local BindCorner = Instance.new("UICorner")
-            local BindTitle = Instance.new("TextLabel")
-            local BindText = Instance.new("TextLabel")
 
-            Bind.Name = "Bind"
-            Bind.Parent = Tab
-            Bind.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-            Bind.Size = UDim2.new(0, 363, 0, 42)
-            Bind.AutoButtonColor = false
-            Bind.Font = Enum.Font.SourceSans
-            Bind.Text = ""
-            Bind.TextColor3 = Color3.fromRGB(0, 0, 0)
-            Bind.TextSize = 14.000
-
-            BindCorner.CornerRadius = UDim.new(0, 5)
-            BindCorner.Name = "BindCorner"
-            BindCorner.Parent = Bind
-
-            BindTitle.Name = "BindTitle"
-            BindTitle.Parent = Bind
-            BindTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            BindTitle.BackgroundTransparency = 1.000
-            BindTitle.Position = UDim2.new(0.0358126722, 0, 0, 0)
-            BindTitle.Size = UDim2.new(0, 187, 0, 42)
-            BindTitle.Font = Enum.Font.Gotham
-            BindTitle.Text = text
-            BindTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-            BindTitle.TextSize = 14.000
-            BindTitle.TextXAlignment = Enum.TextXAlignment.Left
-
-            BindText.Name = "BindText"
-            BindText.Parent = Bind
-            BindText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            BindText.BackgroundTransparency = 1.000
-            BindText.Position = UDim2.new(0.0358126722, 0, 0, 0)
-            BindText.Size = UDim2.new(0, 337, 0, 42)
-            BindText.Font = Enum.Font.Gotham
-            BindText.Text = Key
-            BindText.TextColor3 = Color3.fromRGB(255, 255, 255)
-            BindText.TextSize = 14.000
-            BindText.TextXAlignment = Enum.TextXAlignment.Right
-
-            Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
-
-            Bind.MouseButton1Click:Connect(
-                function()
-                    BindText.Text = "..."
-                    binding = true
-                    local inputwait = game:GetService("UserInputService").InputBegan:wait()
-                    if inputwait.KeyCode.Name ~= "Unknown" then
-                        BindText.Text = inputwait.KeyCode.Name
-                        Key = inputwait.KeyCode.Name
-                        binding = false
-                    else
-                        binding = false
-                    end
+            MinimizeBtn.MouseButton1Click:Connect(function()
+                if Textbox.Visible == true then
+                    Textbox.Visible = false
+                else 
+                    Textbox.Visible = true
                 end
-            )
-
-            game:GetService("UserInputService").InputBegan:connect(
-                function(current, pressed)
-                    if not pressed then
-                        if current.KeyCode.Name == Key and binding == false then
-                            pcall(callback)
-                        end
-                    end
-                end
-            )
+            end);
+            Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
         return tabcontent
     end
