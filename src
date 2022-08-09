@@ -304,7 +304,7 @@ function lib:Window(text, preset, closebind)
 
         TweenService:Create(
             NotificationHold,
-            TweenInfo.new(1, "Quint", "Out"),
+            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
             {BackgroundTransparency = 0.7}
         ):Play()
         wait(0.4)
@@ -382,7 +382,7 @@ function lib:Window(text, preset, closebind)
                 TweenService:Create(
                     OkayBtn,
                     TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                    {BackgroundColor3 = Color3.fromRGB(37, 37, 37)}
+                    {BackgroundColor3 = PresetColor}
                 ):Play()
             end
         )
