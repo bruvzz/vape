@@ -267,10 +267,10 @@ function lib:Window(text, preset, closebind)
     end);
 
     MinimizeBtn.MouseButton1Click:Connect(function()
-        if TabHold.Visible = false then
-            TabHold.Visible = true
-        else 
+        if TabBtn.Visible = true then
             TabHold.Visible = false
+        else 
+            TabHold.Visible = true
         end
     end);
 
