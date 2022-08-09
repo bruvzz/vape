@@ -311,7 +311,6 @@ function lib:Window(text, preset, closebind)
 
         NotificationFrame.Name = "NotificationFrame"
         NotificationFrame.Parent = NotificationHold
-        NotificationFrame.AnchorPoint = Vector2.new(0.5, 0.5)
         NotificationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
