@@ -349,7 +349,7 @@ function lib:Window(text, preset, closebind)
         OkayBtnTitle.Text = textbtn
         OkayBtnTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
         OkayBtnTitle.TextSize = 14.000
-        OkayBtnTitle.TextXAlignment = Enum.TextXAlignment.Center
+        OkayBtnTitle.TextXAlignment = Enum.TextXAlignment.Left
 
         NotificationTitle.Name = "NotificationTitle"
         NotificationTitle.Parent = NotificationFrame
