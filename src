@@ -315,7 +315,7 @@ function lib:Window(text, preset, closebind)
         NotificationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
-        NotificationFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+        NotificationFrame.Position = UDim2.new(0.224, 0, 0.356, 0)
 
         NotificationFrame:TweenSize(
             UDim2.new(0, 284, 0, 146),
