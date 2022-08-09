@@ -343,7 +343,7 @@ function lib:Window(text, preset, closebind)
         OkayBtnTitle.Parent = OkayBtn
         OkayBtnTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         OkayBtnTitle.BackgroundTransparency = 1.000
-        OkayBtnTitle.Position = UDim2.new(0.246, 0, 0.707, 0)
+        OkayBtnTitle.Position = UDim2.new(0.0763888881, 0, 0, 0)
         OkayBtnTitle.Size = UDim2.new(0, 181, 0, 42)
         OkayBtnTitle.Font = Enum.Font.Gotham
         OkayBtnTitle.Text = textbtn
