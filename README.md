@@ -7,3 +7,5 @@
 > Credits to `dawid#7205` for the original UI Lib and source for to make this revamp possible.
 
 - You can view the normal UI Lib [here](https://v3rmillion.net/showthread.php?tid=1098651).
+
+> Made with ❤️ by `Ducky#3566`
