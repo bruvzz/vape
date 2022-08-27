@@ -1,6 +1,6 @@
-# Vape UI, but making some tweeks.
+# Vape Lite, but making some tweeks.
 
-> I'm tweeking Vape UI just with some changes, you can also change it if you would like.
+> I'm tweeking Vape Lite just with some changes, you can also change it if you would like.
 
 # Credentials
 
