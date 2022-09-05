@@ -261,6 +261,7 @@ function lib:Window(text, preset, closebind)
         NotificationFrame.Name = "NotificationFrame"
         NotificationFrame.Parent = NotificationHold
         NotificationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+        NotificationFrame.BackgroundTransparency = 1.000
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
         NotificationFrame.Position = UDim2.new(0.224, 0, 0.356, 0)
