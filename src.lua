@@ -160,6 +160,7 @@ function lib:Window(text, preset, closebind)
     CloseBtn.ImageRectOffset = Vector2.new(284, 4)
     CloseBtn.ImageRectSize = Vector2.new(24, 24)
     CloseBtn.ClipsDescendants = true
+    CloseBtn.AnchorPoint = Vector2.new(0.925, 0.016)
     CloseBtn.Image = "rbxassetid://3926305904"
 
     MinimizeBtn.Name = "MinimizeBtn"
@@ -171,6 +172,7 @@ function lib:Window(text, preset, closebind)
     MinimizeBtn.ImageRectOffset = Vector2.new(884, 284)
     MinimizeBtn.ImageRectSize = Vector2.new(36, 36)
     MinimizeBtn.ClipsDescendants = true
+    MinimizeBtn.AnchorPoint = Vector2.new(0.870, 0.016)
     MinimizeBtn.Image = "rbxassetid://3926307971"
 
     Main:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "Out", "Quint", 1, true)
