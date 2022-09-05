@@ -268,7 +268,7 @@ function lib:Window(text, preset, closebind)
 
         TweenService:Create(
             NotificationFrame,
-            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, true),
             {BackgroundTransparency = 0}
         ):Play()
         wait(1)
