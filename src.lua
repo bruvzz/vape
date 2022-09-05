@@ -150,7 +150,7 @@ function lib:Window(text, preset, closebind)
     CloseBtn.Parent = Main
     CloseBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     CloseBtn.AutoButtonColor = false
-    CloseBtn.BackgroundTransparency = 1
+    CloseBtn.BackgroundTransparency = 1.000
     CloseBtn.Position = UDim2.new(0.909, 0, 0.006, 0)
     CloseBtn.Size = UDim2.new(0, 25, 0, 25)
     CloseBtn.Image = "rbxassetid://3926305904"
@@ -159,7 +159,7 @@ function lib:Window(text, preset, closebind)
     MinimizeBtn.Parent = Main
     MinimizeBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     MinimizeBtn.AutoButtonColor = false
-    MinimizeBtn.BackgroundTransparency = 1
+    MinimizeBtn.BackgroundTransparency = 1.000
     MinimizeBtn.Position = UDim2.new(0.842, 0, 0.006, 0)
     MinimizeBtn.Size = UDim2.new(0, 25, 0, 25)
     MinimizeBtn.Image = "rbxassetid://3926307971"
