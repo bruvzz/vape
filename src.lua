@@ -162,8 +162,8 @@ function lib:Window(text, preset, closebind)
     MinimizeBtn.Position = UDim2.new(0.842, 0, 0.006, 0)
     MinimizeBtn.Size = UDim2.new(0, 25, 0, 25)
     MinimizeBtn.ZIndex = 2
-    MinimizeBtn.ImageRectOffset = Vector2.new(284, 4)
-    MinimizeBtn.ImageRectSize = Vector2.new(24, 24)
+    MinimizeBtn.ImageRectOffset = Vector2.new(884, 284)
+    MinimizeBtn.ImageRectSize = Vector2.new(36, 36)
     MinimizeBtn.Image = "rbxassetid://3926307971"
 
     Main:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "Out", "Quint", 1, true)
