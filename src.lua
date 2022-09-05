@@ -97,10 +97,8 @@ function lib:Window(text, preset, closebind)
     local Title = Instance.new("TextLabel")
     local TabFolder = Instance.new("Folder")
     local DragFrame = Instance.new("Frame")
-    local CloseBtn = Instance.new("TextButton")
-    local CloseBtnCorner = Instance.new("UICorner")
-    local MinimizeBtn = Instance.new("TextButton")
-    local MinimizeBtnCorner = Instance.new("UICorner")
+    local CloseBtn = Instance.new("ImageButton")
+    local MinimizeBtn = Instance.new("ImageButton")
 
     Main.Name = "Main"
     Main.Parent = ui
@@ -111,10 +109,6 @@ function lib:Window(text, preset, closebind)
     Main.Size = UDim2.new(0, 514, 0, 507)
     Main.ClipsDescendants = true
     Main.Visible = true
-    
-    MainCorner.CornerRadius = UDim.new(0, 8)
-    MainCorner.Name = "MainCorner"
-    MainCorner.Parent = Main
 
     MainStroke.ApplyStrokeMode = "Border"
     MainStroke.Thickness = 2.000
@@ -158,15 +152,8 @@ function lib:Window(text, preset, closebind)
     CloseBtn.AutoButtonColor = false
     CloseBtn.BackgroundTransparency = 0
     CloseBtn.Position = UDim2.new(0.909, 0, 0.006, 0)
-    CloseBtn.Size = UDim2.new(0, 34, 0, 32)
-    CloseBtn.Text = "X"
-    CloseBtn.TextSize = 27.000
-    CloseBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    CloseBtn.Font = Enum.Font.Nunito
-
-    CloseBtnCorner.CornerRadius = UDim.new(0, 5)
-    CloseBtnCorner.Name = "CloseBtnCorner"
-    CloseBtnCorner.Parent = CloseBtn
+    CloseBtn.Size = UDim2.new(0, 25, 0, 25)
+    CloseBtn.Image = "http://www.roblox.com/asset/?id=3926305904"
 
     MinimizeBtn.Name = "MinimizeBtn"
     MinimizeBtn.Parent = Main
@@ -174,15 +161,8 @@ function lib:Window(text, preset, closebind)
     MinimizeBtn.AutoButtonColor = false
     MinimizeBtn.BackgroundTransparency = 0
     MinimizeBtn.Position = UDim2.new(0.842, 0, 0.006, 0)
-    MinimizeBtn.Size = UDim2.new(0, 34, 0, 32)
-    MinimizeBtn.Text = "_"
-    MinimizeBtn.TextSize = 27.000
-    MinimizeBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
-    MinimizeBtn.Font = Enum.Font.Nunito
-
-    MinimizeBtnCorner.CornerRadius = UDim.new(0, 5)
-    MinimizeBtnCorner.Name = "MinimizeBtnCorner"
-    MinimizeBtnCorner.Parent = MinimizeBtn
+    MinimizeBtn.Size = UDim2.new(0, 25, 0, 25)
+    MinimizeBtn.Image = "http://www.roblox.com/asset/?id=3926307971"
 
     Main:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "Out", "Quint", 1, true)
 
@@ -212,49 +192,9 @@ function lib:Window(text, preset, closebind)
         end
     )
 
-    CloseBtn.MouseEnter:Connect(
-        function()
-            TweenService:Create(
-                CloseBtn,
-                TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                {BackgroundColor3 = Color3.fromRGB(45, 45, 45)}
-            ):Play()
-        end
-    )
-
-    CloseBtn.MouseLeave:Connect(
-        function()
-            TweenService:Create(
-                CloseBtn,
-                TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}
-            ):Play()
-        end
-    )
-
     CloseBtn.MouseButton1Click:Connect(
         function()
             game.CoreGui:FindFirstChild("ui"):Destroy()
-        end
-    )
-
-    MinimizeBtn.MouseEnter:Connect(
-        function()
-            TweenService:Create(
-                MinimizeBtn,
-                TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                {BackgroundColor3 = Color3.fromRGB(45, 45, 45)}
-            ):Play()
-        end
-    )
-
-    MinimizeBtn.MouseLeave:Connect(
-        function()
-            TweenService:Create(
-                MinimizeBtn,
-                TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}
-            ):Play()
         end
     )
 
