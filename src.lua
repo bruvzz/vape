@@ -153,7 +153,7 @@ function lib:Window(text, preset, closebind)
     CloseBtn.BackgroundTransparency = 0
     CloseBtn.Position = UDim2.new(0.909, 0, 0.006, 0)
     CloseBtn.Size = UDim2.new(0, 25, 0, 25)
-    CloseBtn.Image = "http://www.roblox.com/asset/?id=3926305904"
+    CloseBtn.Image = "rbxassetid://3926305904"
 
     MinimizeBtn.Name = "MinimizeBtn"
     MinimizeBtn.Parent = Main
@@ -162,7 +162,7 @@ function lib:Window(text, preset, closebind)
     MinimizeBtn.BackgroundTransparency = 0
     MinimizeBtn.Position = UDim2.new(0.842, 0, 0.006, 0)
     MinimizeBtn.Size = UDim2.new(0, 25, 0, 25)
-    MinimizeBtn.Image = "http://www.roblox.com/asset/?id=3926307971"
+    MinimizeBtn.Image = "rbxassetid://3926307971"
 
     Main:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "Out", "Quint", 1, true)
 
