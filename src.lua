@@ -153,7 +153,7 @@ function lib:Window(text, preset, closebind)
     CloseBtn.Name = "CloseBtn"
     CloseBtn.Parent = Main
     CloseBtn.BackgroundTransparency = 1.000
-    CloseBtn.Position = UDim2.new(0.909, 0, 0.006, 0)
+    CloseBtn.Position = UDim2.new(0.950, 0, 0.016, 0)
     CloseBtn.Size = UDim2.new(0, 25, 0, 25)
     CloseBtn.ZIndex = 2
     CloseBtn.ImageRectOffset = Vector2.new(284, 4)
@@ -163,7 +163,7 @@ function lib:Window(text, preset, closebind)
     MinimizeBtn.Name = "MinimizeBtn"
     MinimizeBtn.Parent = Main
     MinimizeBtn.BackgroundTransparency = 1.000
-    MinimizeBtn.Position = UDim2.new(0.842, 0, 0.006, 0)
+    MinimizeBtn.Position = UDim2.new(0.900, 0, 0.016, 0)
     MinimizeBtn.Size = UDim2.new(0, 25, 0, 25)
     MinimizeBtn.ZIndex = 2
     MinimizeBtn.ImageRectOffset = Vector2.new(884, 284)
