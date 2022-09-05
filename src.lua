@@ -110,6 +110,10 @@ function lib:Window(text, preset, closebind)
     Main.ClipsDescendants = true
     Main.Visible = true
 
+    MainCorner.CornerRadius = UDim.new(0, 5)
+    MainCorner.Name = "MainCorner"
+    MainCorner.Parent = Main
+
     MainStroke.ApplyStrokeMode = "Border"
     MainStroke.Thickness = 2.000
     MainStroke.Color = PresetColor
