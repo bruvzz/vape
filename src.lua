@@ -142,6 +142,7 @@ function lib:Window(text, preset, closebind)
     Title.Text = text
     Title.TextColor3 = Color3.fromRGB(90, 90, 90)
     Title.TextSize = 20.000
+    Title.ClipsDescendants = true
     Title.TextXAlignment = Enum.TextXAlignment.Left
 
     DragFrame.Name = "DragFrame"
@@ -153,21 +154,23 @@ function lib:Window(text, preset, closebind)
     CloseBtn.Name = "CloseBtn"
     CloseBtn.Parent = Main
     CloseBtn.BackgroundTransparency = 1.000
-    CloseBtn.Position = UDim2.new(0.950, 0, 0.016, 0)
+    CloseBtn.Position = UDim2.new(0.925, 0, 0.016, 0)
     CloseBtn.Size = UDim2.new(0, 25, 0, 25)
     CloseBtn.ZIndex = 2
     CloseBtn.ImageRectOffset = Vector2.new(284, 4)
     CloseBtn.ImageRectSize = Vector2.new(24, 24)
+    CloseBtn.ClipsDescendants = true
     CloseBtn.Image = "rbxassetid://3926305904"
 
     MinimizeBtn.Name = "MinimizeBtn"
     MinimizeBtn.Parent = Main
     MinimizeBtn.BackgroundTransparency = 1.000
-    MinimizeBtn.Position = UDim2.new(0.900, 0, 0.016, 0)
+    MinimizeBtn.Position = UDim2.new(0.870, 0, 0.016, 0)
     MinimizeBtn.Size = UDim2.new(0, 25, 0, 25)
     MinimizeBtn.ZIndex = 2
     MinimizeBtn.ImageRectOffset = Vector2.new(884, 284)
     MinimizeBtn.ImageRectSize = Vector2.new(36, 36)
+    MinimizeBtn.ClipsDescendants = true
     MinimizeBtn.Image = "rbxassetid://3926307971"
 
     Main:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "Out", "Quint", 1, true)
