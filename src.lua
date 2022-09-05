@@ -97,8 +97,8 @@ function lib:Window(text, preset, closebind)
     local Title = Instance.new("TextLabel")
     local TabFolder = Instance.new("Folder")
     local DragFrame = Instance.new("Frame")
-    local CloseBtn = Instance.new("ImageLabel")
-    local MinimizeBtn = Instance.new("ImageLabel")
+    local CloseBtn = Instance.new("ImageButton")
+    local MinimizeBtn = Instance.new("ImageButton")
 
     Main.Name = "Main"
     Main.Parent = ui
@@ -148,20 +148,22 @@ function lib:Window(text, preset, closebind)
 
     CloseBtn.Name = "CloseBtn"
     CloseBtn.Parent = Main
-    CloseBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    CloseBtn.AutoButtonColor = false
     CloseBtn.BackgroundTransparency = 1.000
     CloseBtn.Position = UDim2.new(0.909, 0, 0.006, 0)
     CloseBtn.Size = UDim2.new(0, 25, 0, 25)
+    CloseBtn.ZIndex = 2
+    CloseBtn.ImageRectOffset = Vector2.new(284, 4)
+    CloseBtn.ImageRectSize = Vector2.new(24, 24)
     CloseBtn.Image = "rbxassetid://3926305904"
 
     MinimizeBtn.Name = "MinimizeBtn"
     MinimizeBtn.Parent = Main
-    MinimizeBtn.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    MinimizeBtn.AutoButtonColor = false
     MinimizeBtn.BackgroundTransparency = 1.000
     MinimizeBtn.Position = UDim2.new(0.842, 0, 0.006, 0)
     MinimizeBtn.Size = UDim2.new(0, 25, 0, 25)
+    MinimizeBtn.ZIndex = 2
+    MinimizeBtn.ImageRectOffset = Vector2.new(284, 4)
+    MinimizeBtn.ImageRectSize = Vector2.new(24, 24)
     MinimizeBtn.Image = "rbxassetid://3926307971"
 
     Main:TweenPosition(UDim2.new(0.5, 0, 0.5, 0), "Out", "Quint", 1, true)
