@@ -261,17 +261,17 @@ function lib:Window(text, preset, closebind)
         NotificationFrame.Name = "NotificationFrame"
         NotificationFrame.Parent = NotificationHold
         NotificationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-        NotificationFrame.BackgroundTransparency = 1.000
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
         NotificationFrame.Position = UDim2.new(0.224, 0, 0.356, 0)
 
-        TweenService:Create(
-            NotificationFrame,
-            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out, 0, true),
-            {BackgroundTransparency = 0}
-        ):Play()
-        wait(1)
+        NotificationFrame:TweenSize(
+            UDim2.new(0, 284, 0, 146),
+            "Out",
+            "Quint",
+            1,
+            true
+        )
 
         OkayBtn.Name = "OkayBtn"
         OkayBtn.Parent = NotificationFrame
@@ -348,12 +348,13 @@ function lib:Window(text, preset, closebind)
 
         OkayBtn.MouseButton1Click:Connect(
             function()
-                TweenService:Create(
-                NotificationFrame,
-                TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                {BackgroundTransparency = 1}
-            ):Play()
-            wait(1)
+                NotificationFrame:TweenSize(
+                    UDim2.new(0, 0, 0, 0),
+                    Enum.EasingDirection.Out,
+                    Enum.EasingStyle.Quart,
+                    .6,
+                    true
+                )
 
                 wait(0.4)
 
