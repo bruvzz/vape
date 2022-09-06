@@ -231,34 +231,13 @@ function lib:Window(text, preset, closebind)
     end
 
     function lib:Notification(texttitle, textdesc, textbtn)
-        local NotificationHold = Instance.new("TextButton")
         local NotificationFrame = Instance.new("Frame")
         local OkayBtn = Instance.new("ImageButton")
         local NotificationTitle = Instance.new("TextLabel")
         local NotificationDesc = Instance.new("TextLabel")
 
-        NotificationHold.Name = "NotificationHold"
-        NotificationHold.Parent = ui
-        NotificationHold.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-        NotificationHold.BackgroundTransparency = 1.000
-        NotificationHold.BorderSizePixel = 0
-        NotificationHold.Size = UDim2.new(0, 306, 0, 130)
-        NotificationFrame.Position = UDim2.new(0.841, 0, 2, 0)
-        NotificationHold.AutoButtonColor = false
-        NotificationHold.Font = Enum.Font.SourceSans
-        NotificationHold.Text = ""
-        NotificationHold.TextColor3 = Color3.fromRGB(0, 0, 0)
-        NotificationHold.TextSize = 14.000
-
-        TweenService:Create(
-            NotificationHold,
-            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-            {BackgroundTransparency = 0.7}
-        ):Play()
-        wait(0.4)
-
         NotificationFrame.Name = "NotificationFrame"
-        NotificationFrame.Parent = NotificationHold
+        NotificationFrame.Parent = ui
         NotificationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
@@ -312,16 +291,6 @@ function lib:Window(text, preset, closebind)
                 game.CoreGui:FindFirstChild("NotificationFrame"):Destroy()
 
                 wait(0.4)
-
-                TweenService:Create(
-                    NotificationHold,
-                    TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                    {BackgroundTransparency = 1}
-                ):Play()
-
-                wait(.3)
-
-                NotificationHold:Destroy()
             end
         )
     end
