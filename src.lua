@@ -238,11 +238,12 @@ function lib:Window(text, preset, closebind)
         local NotificationDesc = Instance.new("TextLabel")
 
         NotificationHold.Name = "NotificationHold"
-        NotificationHold.Parent = Main
+        NotificationHold.Parent = ducklib
         NotificationHold.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
         NotificationHold.BackgroundTransparency = 1.000
         NotificationHold.BorderSizePixel = 0
-        NotificationHold.Size = UDim2.new(0, 560, 0, 507)
+        NotificationHold.Size = UDim2.new(0, 306, 0, 130)
+        NotificationFrame.Position = UDim2.new(0.841, 0, 2, 0)
         NotificationHold.AutoButtonColor = false
         NotificationHold.Font = Enum.Font.SourceSans
         NotificationHold.Text = ""
@@ -262,6 +263,7 @@ function lib:Window(text, preset, closebind)
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
         NotificationFrame.Position = UDim2.new(0.841, 0, 2, 0)
+        NotificationFrame.Size = UDim2.new(0, 306, 0, 130)
 
         TweenService:Create(
             NotificationFrame,
