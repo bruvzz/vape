@@ -257,7 +257,7 @@ function lib:Window(text, preset, closebind)
         wait(0.4)
 
         NotificationFrame.Name = "NotificationFrame"
-        NotificationFrame.Parent = ui
+        NotificationFrame.Parent = NotificationHold
         NotificationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
