@@ -244,7 +244,7 @@ function lib:Window(text, preset, closebind)
         NotificationFrame.Position = UDim2.new(0.841, 0, 2, 0)
         NotificationFrame.Size = UDim2.new(0, 306, 0, 130)
 
-        NotificationFrame:TweenPosition(UDim2.new(0.825, 0, 1, 0), "Out", "Sine", 1, true)
+        NotificationFrame:TweenPosition(UDim2.new(0.825, 0, 0.825, 0), "Out", "Sine", 1, true)
 
         OkayBtn.Name = "OkayBtn"
         OkayBtn.Parent = NotificationFrame
