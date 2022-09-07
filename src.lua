@@ -288,8 +288,6 @@ function lib:Window(text, preset, closebind)
         OkayBtn.MouseButton1Click:Connect(
             function()
                 game.CoreGui:FindFirstChild("NotificationFrame"):Destroy()
-
-                wait(0.4)
             end
         )
     end
