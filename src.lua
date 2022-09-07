@@ -283,10 +283,11 @@ function lib:Window(text, preset, closebind)
 
         OkayBtn.MouseButton1Click:Connect(
             function()
-                game.CoreGui:FindFirstChild("NotificationFrame"):Destroy()
+                NotificationFrame:Destroy()
             end
         )
     end
+
     local tabhold = {}
     function tabhold:Tab(text)
         local TabBtn = Instance.new("TextButton")
