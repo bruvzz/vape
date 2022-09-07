@@ -244,7 +244,7 @@ function lib:Window(text, preset, closebind)
         NotificationFrame.Position = UDim2.new(0.841, 0, 2, 0)
         NotificationFrame.Size = UDim2.new(0, 306, 0, 130)
 
-        NotificationFrame:TweenPosition(UDim2.new(0.841, 0, 0.843, 0), "Out", "Sine", 1, true)
+        NotificationFrame:TweenPosition(UDim2.new(0.825, 0, 1, 0), "Out", "Sine", 1, true)
 
         OkayBtn.Name = "OkayBtn"
         OkayBtn.Parent = NotificationFrame
@@ -253,6 +253,9 @@ function lib:Window(text, preset, closebind)
         OkayBtn.Position = UDim2.new(0.918, 0, 0, 0)
         OkayBtn.Size = UDim2.new(0, 25, 0, 25)
         OkayBtn.AutoButtonColor = false
+        OkayBtn.ZIndex = 2
+        OkayBtn.ImageRectOffset = Vector2.new(284, 4)
+        OkayBtn.ImageRectSize = Vector2.new(24, 24)
         OkayBtn.Image = "rbxassetid://3926305904"
 
         NotificationTitle.Name = "NotificationTitle"
