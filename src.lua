@@ -246,7 +246,7 @@ function lib:Window(text, preset, closebind)
 
         TweenService:Create(
             NotificationFrame,
-            TweenInfo.new(Enum.EasingStyle.Sine, Enum.EasingDirection.Out, 0.4, true),
+            TweenInfo.new(Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
             {NotificationFrame.Position = UDim2.new(0.841, 0, 0.843, 0)}
         ):Play()
 
