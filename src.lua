@@ -246,10 +246,9 @@ function lib:Window(text, preset, closebind)
 
         TweenService:Create(
             NotificationFrame,
-            TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
+            TweenInfo.new(0.4, Enum.EasingStyle.Sine, Enum.EasingDirection.Out),
             {NotificationFrame.Position = UDim2.new(0.841, 0, 0.843, 0)}
         ):Play()
-        wait(1)
 
         OkayBtn.Name = "OkayBtn"
         OkayBtn.Parent = NotificationFrame
